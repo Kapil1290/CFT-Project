@@ -1,16 +1,56 @@
-# React + Vite
+# React Card Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple React project that fetches card data from an API and displays it in reusable cards.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Fetch card data from API
+- Display multiple cards
+- Reusable Card component
+- Responsive card layout
+- Loading and error handling
+- Context API for managing card data
+- Tailwind CSS for styling
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- Tailwind CSS
+- Context API
+- Fetch API
+- Vite
 
-## Expanding the Oxlint configuration
+## API Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+JSONPlaceholder API:
+
+https://jsonplaceholder.typicode.com/posts
+
+The API provides:
+
+- User ID
+- Post ID
+- Title
+- Description/Body
+
+## Project Structure
+
+src/
+- components/
+  - Card.jsx
+- context/
+  - CardContext.jsx
+- App.jsx
+- main.jsx
+- index.css
+
+## How It Works
+
+1. The application fetches data from the API.
+2. The data is stored in Context state.
+3. `App.jsx` gets the card data from Context.
+4. `map()` is used to create multiple Card components.
+5. Card data is passed to the Card component using props.
+6. The X button removes a card from the React state.
+7. React automatically updates the UI.
